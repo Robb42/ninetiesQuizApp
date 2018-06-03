@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="90's Music Trivia Quiz App">
+
+    <title>90's Music Trivia</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="float-grid.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Permanent+Marker|Hammersmith+One" rel="stylesheet">
+  </head>
+
+  <body class="background">
+    <div class="col-12">
+      <header role="banner">
+        <div class="headContainer">
+          <h1>90's Music Trivia!</h1>
+        </div>
+      </header>
+      
+      <main role="main"> 
+        <div class="quizAppBox startPage" id="js-start-page">
+          <p>How well do you know your 90's music?  Answer these 10 questions to find out.</p>
+          <input class="button" type="button" name="startQuiz" id="js-start-quiz" value="Start Quiz!">
+          <label for="js-start-quiz"></label>
+        </div>
+
+        <div id="js-question-page" class="questionPage hiddenToggle">
+          <div class="scoreBox">
+            <div class="questionNumber" id="js-question-number">
+              <h2></h2>
+            </div>
+            <div class="currentScore" id="js-current-score">
+              <h2></h2>
+            </div>
+          </div>
+          <form class="quizAppBox" id="js-quiz-form">
+            <fieldset name="trivia-quiz">         
+              <legend class="question" id="js-question">Question</legend>
+              <input class="button" type="button" name="answer" id="js-answer-1" value="Answer 1">
+              <label for="js-answer-1"></label><br>
+              <input class="button" type="button" name="answer" id="js-answer-2" value="Answer 2">
+              <label for="js-answer-2"></label><br>
+              <input class="button" type="button" name="answer" id="js-answer-3" value="Answer 3">
+              <label for="js-answer-3"></label><br>
+              <input class="button" type="button" name="answer" id="js-answer-4" value="Answer 4">
+              <label for="js-answer-4"></label><br>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="quizAppBox rightAnswerPage hiddenToggle" id="js-right-answer">
+          <p>You got it right! Good job!</p>
+          <input class="button" type="button" name="nextQuestion" id="next-question-right" value="Next Question">
+          <label for="next-question-right"></label>
+        </div>
+
+        <div class="quizAppBox wrongAnswerPage hiddenToggle" id="js-wrong-answer">
+          <p>You got it wrong!</p>
+          <input class="button" type="button" name="nextQuestion" id="next-question-wrong" value="Next Question">
+          <label for="next-question-wrong"></label>
+        </div>
+
+        <div class="quizAppBox finalPage hiddenToggle" id="js-final-page">
+          <p></p>
+          <input class="button" type="button" name="startQuiz" id="js-start-quiz-over" value="Start Over!">
+          <label for="js-start-quiz-over"></label>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
